@@ -26,9 +26,9 @@ router.get('/', (req, res, next) => {
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    /***************************************************
+     * ADDED CODE HERE FOR ADDING NEW BOOK *
+     ***************************************************/
      res.render('books/add', {title: 'Add Book'});
 
 });
@@ -36,9 +36,9 @@ router.get('/add', (req, res, next) => {
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    /***************************************************
+     * ADDED CODE HERE FOR POSTING THE NEW BOOK DETAILS *
+     ***************************************************/
      let newBook = book({
       "Title": req.body.title,
       "Author": req.body.author,
@@ -64,9 +64,9 @@ router.post('/add', (req, res, next) => {
 // GET the Book Details page in order to edit an existing Book
 router.get('/edit/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    /***************************************************
+     * ADDED CODE HERE FOR EDITING THE BOOK DETAILS *
+     ***************************************************/
 
      let id = req.params.id;
 
@@ -87,9 +87,9 @@ router.get('/edit/:id', (req, res, next) => {
 // POST - process the information passed from the details form and update the document
 router.post('/edit/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    /***************************************************
+     * ADDED CODE HERE FOR POSTING THE UPDATED BOOK DETAILS *
+     ***************************************************/
      let id = req.params.id
 
      let updatedBook = book({
@@ -119,9 +119,9 @@ router.post('/edit/:id', (req, res, next) => {
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    /***************************************************
+     * ADDED CODE HERE FOR DELETING BOOK DETAILS  *
+     ***************************************************/
 
      let id = req.params.id;
 
